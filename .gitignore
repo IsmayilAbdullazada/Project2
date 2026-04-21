@@ -206,11 +206,7 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# data files
-data
-
 # scoring script
-score.py
 output.txt
 
 # model checkpoints
