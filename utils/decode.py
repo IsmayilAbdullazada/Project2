@@ -1,6 +1,5 @@
 import json
 import torch
-import torch.nn.functional as F
 
 
 _TOKEN_COUNTS = None
@@ -117,7 +116,7 @@ def build_vocab_tensor(scr2id, letter2id, device="cpu"):
     return words, vocab_tensor.to(device), lengths.to(device)
 
 
-def decode_batch(logits, logit_lengths, dataset):
+def decode_batch(logits, logit_lengths, dataset, use_viterbi=False):
 
     words, vocab_tensor, lengths = build_vocab_tensor(
         dataset.scr2id,
@@ -131,7 +130,7 @@ def decode_batch(logits, logit_lengths, dataset):
         lengths, # [w]: length of each word
         dataset.letter2id, # {'a':18, 'b':6, ..., '|':23}
         logit_lengths, # [b]: don't try to decode past the number of frames in each utterance!
-        use_viterbi=False,
+        use_viterbi=use_viterbi,
     )
 
     if scores is not None:

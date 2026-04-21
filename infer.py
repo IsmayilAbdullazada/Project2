@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# infer.py
 import argparse
 import torch
 from pathlib import Path
@@ -29,6 +27,13 @@ def check_argv():
         type=Path,
         default="output.txt"
     )
+    parser.add_argument(
+        "--decoder",
+        type=str,
+        choices=["alpha", "viterbi"],
+        default="alpha",
+        help="Decoding mode: alpha(forward) or viterbi(max-path)",
+    )
     return parser.parse_args()
 
 # --------------------------------------------------
@@ -46,7 +51,11 @@ def main(args):
     # Dataset / Loader
     # --------------------------------------------------
     CHECKPOINT_PATH = args.checkpoint_path
-    OUTPUT_PATH =args.output_path
+    OUTPUT_PATH = args.output_path
+    use_viterbi = args.decoder == "viterbi"
+
+    print(f"Decoder mode: {args.decoder}")
+
     test_dataset = CLSPDataset(subset=args.subset)
     test_loader = DataLoader(
         test_dataset,
@@ -87,7 +96,12 @@ def main(args):
             logit_lengths = wav_lengths_to_logit_lengths(batch['wav_lengths']).to(device)
 
             # decode predictions: returns vocab index per sample
-            pred_vocab_idx = decode_batch(logits, logit_lengths, test_dataset)  # [B], indices into vocab_tensor
+            pred_vocab_idx = decode_batch(
+                logits,
+                logit_lengths,
+                test_dataset,
+                use_viterbi=use_viterbi,
+            )  # [B], indices into vocab_tensor
 
             # convert to actual words
             for idx in pred_vocab_idx:

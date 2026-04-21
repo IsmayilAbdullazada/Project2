@@ -1,0 +1,311 @@
+{
+  "data_dir": "data",
+  "splits": {
+    "trn": {
+      "files_present": {
+        "scr": true,
+        "lbls": true,
+        "wav": true
+      },
+      "line_counts": {
+        "scr": 798,
+        "lbls": 798,
+        "wav": 798
+      },
+      "consistent_num_rows": true,
+      "transcripts": {
+        "num_utterances": 798,
+        "num_unique_words": 48,
+        "top_words": [
+          [
+            "greasy",
+            25
+          ],
+          [
+            "only",
+            25
+          ],
+          [
+            "about",
+            25
+          ],
+          [
+            "many",
+            25
+          ],
+          [
+            "into",
+            25
+          ],
+          [
+            "oily",
+            25
+          ],
+          [
+            "never",
+            25
+          ],
+          [
+            "allow",
+            25
+          ],
+          [
+            "every",
+            25
+          ],
+          [
+            "often",
+            25
+          ]
+        ]
+      },
+      "labels": {
+        "num_utterances": 798,
+        "tokens_per_utterance": {
+          "min": 111,
+          "max": 182,
+          "mean": 133.816
+        }
+      },
+      "audio": {
+        "num_listed": 798,
+        "num_missing": 0,
+        "num_unreadable": 0,
+        "duration_seconds": {
+          "min": 1.1304,
+          "max": 1.8442,
+          "mean": 1.3577,
+          "total": 1083.44
+        },
+        "sample_rate_distribution": {
+          "16000": 798
+        },
+        "channel_distribution": {
+          "1": 798
+        },
+        "missing_examples": [],
+        "unreadable_examples": []
+      }
+    },
+    "dev": {
+      "files_present": {
+        "scr": true,
+        "lbls": true,
+        "wav": true
+      },
+      "line_counts": {
+        "scr": 393,
+        "lbls": 393,
+        "wav": 393
+      },
+      "consistent_num_rows": true,
+      "transcripts": {
+        "num_utterances": 393,
+        "num_unique_words": 48,
+        "top_words": [
+          [
+            "over",
+            12
+          ],
+          [
+            "always",
+            12
+          ],
+          [
+            "only",
+            12
+          ],
+          [
+            "never",
+            12
+          ],
+          [
+            "after",
+            12
+          ],
+          [
+            "carry",
+            12
+          ],
+          [
+            "about",
+            12
+          ],
+          [
+            "water",
+            12
+          ],
+          [
+            "often",
+            12
+          ],
+          [
+            "every",
+            12
+          ]
+        ]
+      },
+      "labels": {
+        "num_utterances": 393,
+        "tokens_per_utterance": {
+          "min": 112,
+          "max": 178,
+          "mean": 134.382
+        }
+      },
+      "audio": {
+        "num_listed": 393,
+        "num_missing": 0,
+        "num_unreadable": 0,
+        "duration_seconds": {
+          "min": 1.1388,
+          "max": 1.8009,
+          "mean": 1.3634,
+          "total": 535.8
+        },
+        "sample_rate_distribution": {
+          "16000": 393
+        },
+        "channel_distribution": {
+          "1": 393
+        },
+        "missing_examples": [],
+        "unreadable_examples": []
+      }
+    },
+    "tst": {
+      "files_present": {
+        "scr": false,
+        "lbls": false,
+        "wav": false
+      },
+      "line_counts": {
+        "scr": 0,
+        "lbls": 0,
+        "wav": 0
+      },
+      "consistent_num_rows": true
+    }
+  },
+  "json_files": [
+    {
+      "name": "dev_alignments.json",
+      "parse_ok": true,
+      "top_level_type": "dict",
+      "length": 393,
+      "sample_keys": [
+        "0005.wav",
+        "0024.wav",
+        "0030.wav",
+        "0031.wav",
+        "0036.wav"
+      ],
+      "value_type_distribution": {
+        "list": 393
+      },
+      "list_length_stats": {
+        "min": 12,
+        "max": 24,
+        "mean": 14.83
+      }
+    },
+    {
+      "name": "lbl_vocab.json",
+      "parse_ok": true,
+      "top_level_type": "list",
+      "length": 256,
+      "element_type_distribution": {
+        "str": 256
+      },
+      "sample": [
+        "EU",
+        "JR",
+        "DM",
+        "CU",
+        "IB"
+      ]
+    },
+    {
+      "name": "scr_letters.json",
+      "parse_ok": true,
+      "top_level_type": "list",
+      "length": 23,
+      "element_type_distribution": {
+        "str": 23
+      },
+      "sample": [
+        "r",
+        "g",
+        "c",
+        "i",
+        "h"
+      ]
+    },
+    {
+      "name": "scr_vocab.json",
+      "parse_ok": true,
+      "top_level_type": "list",
+      "length": 48,
+      "element_type_distribution": {
+        "str": 48
+      },
+      "sample": [
+        "every",
+        "oily",
+        "system",
+        "table",
+        "around"
+      ]
+    },
+    {
+      "name": "trn_alignments.json",
+      "parse_ok": true,
+      "top_level_type": "dict",
+      "length": 798,
+      "sample_keys": [
+        "0006.wav",
+        "0017.wav",
+        "0019.wav",
+        "0037.wav",
+        "0038.wav"
+      ],
+      "value_type_distribution": {
+        "list": 798
+      },
+      "list_length_stats": {
+        "min": 12,
+        "max": 24,
+        "mean": 14.822
+      }
+    },
+    {
+      "name": "trn_token_counts.json",
+      "parse_ok": true,
+      "top_level_type": "dict",
+      "length": 24,
+      "sample_keys": [
+        "|",
+        "M",
+        "O",
+        "N",
+        "E"
+      ],
+      "value_type_distribution": {
+        "int": 24
+      },
+      "value_stats": {
+        "min": 46,
+        "max": 41157,
+        "mean": 2233.042
+      },
+      "largest_entry": {
+        "key": "|",
+        "value": 41157
+      },
+      "smallest_entry": {
+        "key": "X",
+        "value": 46
+      }
+    }
+  ]
+}

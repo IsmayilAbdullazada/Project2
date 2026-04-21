@@ -1,0 +1,155 @@
+{
+  "output_vs_gold": {
+    "n": 393,
+    "accuracy": 0.9134860050890585,
+    "macro_f1": 0.9145706322544557,
+    "errors": 34,
+    "top_confusions": [
+      {
+        "gold": "order",
+        "pred": "water",
+        "count": 4
+      },
+      {
+        "gold": "over",
+        "pred": "order",
+        "count": 2
+      },
+      {
+        "gold": "without",
+        "pred": "become",
+        "count": 2
+      },
+      {
+        "gold": "after",
+        "pred": "often",
+        "count": 2
+      },
+      {
+        "gold": "enough",
+        "pred": "about",
+        "count": 2
+      },
+      {
+        "gold": "enough",
+        "pred": "never",
+        "count": 1
+      },
+      {
+        "gold": "always",
+        "pred": "water",
+        "count": 1
+      },
+      {
+        "gold": "always",
+        "pred": "oily",
+        "count": 1
+      },
+      {
+        "gold": "about",
+        "pred": "without",
+        "count": 1
+      },
+      {
+        "gold": "only",
+        "pred": "every",
+        "count": 1
+      },
+      {
+        "gold": "table",
+        "pred": "people",
+        "count": 1
+      },
+      {
+        "gold": "only",
+        "pred": "oily",
+        "count": 1
+      },
+      {
+        "gold": "other",
+        "pred": "only",
+        "count": 1
+      },
+      {
+        "gold": "water",
+        "pred": "allow",
+        "count": 1
+      },
+      {
+        "gold": "after",
+        "pred": "nothing",
+        "count": 1
+      }
+    ],
+    "top_misrecognized_words": [
+      {
+        "word": "order",
+        "count": 4
+      },
+      {
+        "word": "enough",
+        "count": 3
+      },
+      {
+        "word": "always",
+        "count": 3
+      },
+      {
+        "word": "over",
+        "count": 3
+      },
+      {
+        "word": "without",
+        "count": 3
+      },
+      {
+        "word": "only",
+        "count": 3
+      },
+      {
+        "word": "after",
+        "count": 3
+      },
+      {
+        "word": "other",
+        "count": 2
+      },
+      {
+        "word": "into",
+        "count": 2
+      },
+      {
+        "word": "about",
+        "count": 1
+      },
+      {
+        "word": "table",
+        "count": 1
+      },
+      {
+        "word": "water",
+        "count": 1
+      },
+      {
+        "word": "dinner",
+        "count": 1
+      },
+      {
+        "word": "never",
+        "count": 1
+      },
+      {
+        "word": "nothing",
+        "count": 1
+      }
+    ]
+  },
+  "alpha_vs_viterbi": {
+    "subset": "dev",
+    "alpha_accuracy": 0.9134860050890585,
+    "viterbi_accuracy": 0.9134860050890585,
+    "decoder_disagree_count": 0,
+    "n": 393,
+    "device": "cuda"
+  }
+}
