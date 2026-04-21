@@ -33,7 +33,7 @@ mfcc_transform = get_mfcc_transform(n_mfcc)
 # CPU ONLY
 # -------------------------------------------------
 
-device = torch.device("cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("Using device:", device)
 
 SEED = 7
